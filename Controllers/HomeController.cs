@@ -4,10 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using WebFunctionApp.Models;
 
-
 namespace WebFunctionApp.Controllers
 {
-    [Authorize]
+   // [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -16,7 +15,6 @@ namespace WebFunctionApp.Controllers
         {
             _logger = logger;
         }
-        [Authorize(Roles = "Users")]
         public IActionResult Index()
         {
             return View();
